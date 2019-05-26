@@ -78,15 +78,7 @@
       var score_p1 = 0;
       var score_p2 = 0;
       var isStart = 0;
-      //   init();
       callGetStatus();
-
-      //   function init() {
-      //     counting = 5;
-      //     $("#score_player_one").text("Score Player one : " + score_p1);
-      //     $("#score_player_two").text("Score Player two : " + score_p2);
-      //     // get_status
-      //   }
 
       function getScPlayerI() {
         window.getScorePlayerOne = setInterval(function() {
@@ -139,7 +131,6 @@
             success: function(res) {
               if (res == "1") {
                 if (isStart == 0) {
-                  //   init();
                   isStart = 1;
                   callCountdown();
                   getScPlayerI();
@@ -147,7 +138,6 @@
                   clearInterval(window.getStatus);
                 }
               }
-              //$("#score_player_two").text("Score Player two : " + res);
             },
             fail: function(res) {
               console.log(response);
@@ -182,8 +172,6 @@
             // set status
             isStart = 0;
             callSetStatus();
-            // sleep(2500);
-            // $.wait(5000).then(callGetStatus);
 
             clearInterval(countingTimer);
           }
